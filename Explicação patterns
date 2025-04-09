@@ -1,0 +1,26 @@
+O Strategy Patterns é um padrão de desenvolvimento de projetos que permite
+definir metodos e classes intercambíaveis.
+Ou seja, ele é util quando você tem uma aplicação que realiza uma tarefa de varias formas diferentes.
+
+Ex: Um serviço onde sua funcionalidade de pagamento, permite desde cartão de credito até pix, cartão de debito etc
+
+Estrutura:
+Você cria 2 modulos: Strategy -> Define a interface do metodo onde vai ter a estrategia a ser implementada
+e as estrategias concretas com os metodos que efetuam a mesma funcionalidade, mas de formas diferentes.
+
+Ou seja, no contexto do pagamento, você cria a interface RealizarPagamento, onde vai ter o contrato
+do metodo de pagamento com os respectivos parametros e dado de retorno.
+E você cria o metodo concreto RealizarPagamentoPix que faz a funcionalidade pagamento atráves do pix
+E o outro metodo concreto RealizarPagamentoCartaoCredito que faz a funcionalidade de pagamento atráves do cartão de credito
+
+Service ->
+    Responsavel por conter o metodo que utiliza a estrategia e seleciona a correta para o contexto.
+    Ou seja, se o usuario escolheu pagar por pix, é o metodo RealizarPagamentoService que vai definir que a estrategia
+    concreta a ser utilizada é o RealizarPagamentoPix
+
+
+O Adapter Patter é um padrão de desenvolvimento de projetos que permite que duas interfaces incompátiveis trabalhem
+juntas.
+
+
+
